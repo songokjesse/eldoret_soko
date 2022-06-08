@@ -11,7 +11,6 @@ export const getStaticProps = async () => {
     }
 }
 const Index = ({houses}) => {
-    console.log(houses)
     return(
         <>
             <div className="container">
@@ -32,7 +31,7 @@ const Index = ({houses}) => {
                         <td>{house.category}</td>
                         <td>{house.location}</td>
                         <td>{house.price} Ksh</td>
-                        <td><Link href="#"><a>Show</a></Link></td>
+                        <td><Link href={'/admin/houses/'+ house.house_id }><a>Show Details</a></Link></td>
                     </tr>
                             ))}
                 </tbody>
